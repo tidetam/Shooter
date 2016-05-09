@@ -33,6 +33,7 @@ namespace CompleteProject
             gunAudio = GetComponent<AudioSource> ();
             gunLight = GetComponent<Light> ();
 			//faceLight = GetComponentInChildren<Light> ();
+			damagePerShot=SetAttributes.power;
         }
 
 

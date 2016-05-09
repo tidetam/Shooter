@@ -18,7 +18,7 @@ namespace CompleteProject
             text = GetComponent <Text> ();
 
             // Reset the score.
-            score = 0;
+			score = 0;
         }
 
 

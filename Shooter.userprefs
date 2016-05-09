@@ -1,15 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_CompletedAssets/Scripts/Managers/EnemyManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_CompletedAssets/Scripts/Player/PlayerHealth.cs">
     <Files>
-      <File FileName="Assets/Scripts/Managers/ScoreManager.cs" Line="16" Column="11" />
-      <File FileName="Assets/_CompletedAssets/Scripts/Managers/ScoreBoardManager.cs" Line="40" Column="1" />
-      <File FileName="Assets/_CompletedAssets/Scripts/Managers/ScoreManager.cs" Line="20" Column="24" />
-      <File FileName="Assets/_CompletedAssets/Scripts/Enemy/EnemyHealth.cs" Line="92" Column="15" />
-      <File FileName="Assets/_CompletedAssets/Scripts/Player/PlayerHealth.cs" Line="161" Column="40" />
-      <File FileName="Assets/_CompletedAssets/Scripts/Player/PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/_CompletedAssets/Scripts/Managers/GameOverManager.cs" Line="14" Column="25" />
-      <File FileName="Assets/_CompletedAssets/Scripts/Managers/EnemyManager.cs" Line="18" Column="3" />
+      <File FileName="Assets/_CompletedAssets/Scripts/Managers/EnemyManager.cs" Line="14" Column="23" />
+      <File FileName="Assets/Scripts/Managers/ScoreManager.cs" Line="19" Column="2" />
+      <File FileName="Assets/_CompletedAssets/Scripts/Managers/ScoreManager.cs" Line="21" Column="14" />
+      <File FileName="Assets/_CompletedAssets/Scripts/Enemy/EnemyMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game Jam Menu Template/Scripts/StartOptions.cs" Line="86" Column="38" />
+      <File FileName="Assets/Game Jam Menu Template/Scripts/PlayMusic.cs" Line="7" Column="2" />
+      <File FileName="Assets/Game Jam Menu Template/Scripts/SetAttributes.cs" Line="6" Column="2" />
+      <File FileName="Assets/_CompletedAssets/Scripts/Player/PlayerHealth.cs" Line="120" Column="60" />
+      <File FileName="Assets/_CompletedAssets/Scripts/Enemy/EnemyAttack.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

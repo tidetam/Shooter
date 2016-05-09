@@ -40,7 +40,8 @@ namespace CompleteProject
             playerShooting = GetComponentInChildren <PlayerShooting> ();
 
             // Set the initial health of the player.
-            currentHealth = startingHealth;
+			startingHealth=SetAttributes.hp;
+			currentHealth = startingHealth;
 
 			playerRigidbody = GetComponent <Rigidbody> ();
         }
@@ -116,7 +117,7 @@ namespace CompleteProject
             currentHealth -= amount;
 
             // Set the health bar's value to the current health.
-            healthSlider.value = currentHealth;
+			healthSlider.value =  (currentHealth*100)/startingHealth;
 
             // Play the hurt sound effect.
             playerAudio.Play ();
@@ -141,6 +142,7 @@ namespace CompleteProject
             // Tell the animator that the player is dead.
             anim.SetTrigger ("Die");
 			ScoreBoardManager.AddScore (ScoreManager.score);
+			SetAttributes.addCoins (ScoreManager.score);
 
             // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
             playerAudio.clip = deathClip;
@@ -156,7 +158,7 @@ namespace CompleteProject
         {
             // Reload the level that is currently loaded.
 
-            SceneManager.LoadScene (0);
+            SceneManager.LoadScene (1);
         }
 
 		void OnTriggerEnter(Collider other) 
