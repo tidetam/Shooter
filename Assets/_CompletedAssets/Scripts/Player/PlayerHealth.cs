@@ -142,7 +142,7 @@ namespace CompleteProject
             // Tell the animator that the player is dead.
             anim.SetTrigger ("Die");
 			ScoreBoardManager.AddScore (ScoreManager.score);
-			SetAttributes.addCoins (ScoreManager.score);
+
 
             // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
             playerAudio.clip = deathClip;
@@ -158,7 +158,7 @@ namespace CompleteProject
         {
             // Reload the level that is currently loaded.
 
-            SceneManager.LoadScene (1);
+            SceneManager.LoadScene (0);
         }
 
 		void OnTriggerEnter(Collider other) 
@@ -179,6 +179,8 @@ namespace CompleteProject
 			} else if (other.gameObject.CompareTag ("goldpack")) {
 				other.gameObject.SetActive (false);
 				ScoreManager.score += 30;
+				//Add coins
+				SetAttributes.addCoins (30);
 			} else if (other.gameObject.CompareTag ("speedpack")) {
 				other.gameObject.SetActive (false);
 				triggerFast = true;

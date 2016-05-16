@@ -11,7 +11,11 @@ namespace CompleteProject
         public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
         public AudioClip deathClip;                 // The sound to play when the enemy dies.
 
-		public GameObject pickup;
+		public GameObject gunpickup;
+		public GameObject healthpickup;
+		public GameObject speedpickup;
+		public GameObject scorepickup;
+
 		Transform player;               // Reference to the player's position.
 		PlayerHealth playerHealth;      // Reference to the player's health.
 
@@ -79,6 +83,7 @@ namespace CompleteProject
             if(currentHealth <= 0)
             {
                 // ... the enemy is dead.
+				hitPoint.y += 0.5f;
                 Death (hitPoint);
             }
         }
@@ -90,22 +95,21 @@ namespace CompleteProject
             isDead = true;
 			float v = Random.value;
 			if (v > 0.6) {
-				GameObject piup = (GameObject)GameObject.Instantiate(pickup, hitPoint, Quaternion.identity);
-				Renderer render = (Renderer) piup.GetComponent("Renderer");
+//				GameObject piup = (GameObject)GameObject.Instantiate(pickup, hitPoint, Quaternion.identity);
 				if (v > 0.9) {
-					render.material.color = Color.green;
-					piup.tag = "gunpack";
+					gunpickup = (GameObject)GameObject.Instantiate(gunpickup, hitPoint, Quaternion.identity);
+					gunpickup.tag = "gunpack";
 
 				} else if (v > 0.82) {
-					render.material.color = Color.red;
-					piup.tag = "healthpack";
+					healthpickup = (GameObject)GameObject.Instantiate(healthpickup, hitPoint, Quaternion.identity);
+					healthpickup.tag = "healthpack";
 				} else if (v > 0.7) {
-					render.material.color = Color.yellow;
-					piup.tag = "goldpack";
+					scorepickup = (GameObject)GameObject.Instantiate(scorepickup, hitPoint, Quaternion.identity);
+					scorepickup.tag = "goldpack";
 				}
 				else {
-					render.material.color = Color.cyan;
-					piup.tag = "speedpack";
+					speedpickup = (GameObject)GameObject.Instantiate(speedpickup, hitPoint, Quaternion.identity);
+					speedpickup.tag = "speedpack";
 				}
 
 			}
@@ -136,6 +140,9 @@ namespace CompleteProject
 
             // Increase the score by the enemy's score value.
             ScoreManager.score += scoreValue;
+
+			//Add coins
+			SetAttributes.addCoins (scoreValue);
 
             // After 2 seconds destory the enemy.
             Destroy (gameObject, 2f);

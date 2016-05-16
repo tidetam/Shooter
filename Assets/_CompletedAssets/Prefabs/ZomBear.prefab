@@ -321,7 +321,10 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
-  pickup: {fileID: 122728, guid: deef8a1d246004f4ebafbd6bf1b8e806, type: 2}
+  gunpickup: {fileID: 103222, guid: ab39221d4ec50448a8b0d077da61d1cc, type: 2}
+  healthpickup: {fileID: 160066, guid: 20687f46d9cd345a3bccd74847bf2125, type: 2}
+  speedpickup: {fileID: 155500, guid: e0e15446c8fe540c99a8eade90bc368f, type: 2}
+  scorepickup: {fileID: 184410, guid: e9987c430c1ab46ec9f32367842126f4, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3519,6 +3522,22 @@ Prefab:
       propertyPath: pickup
       value: 
       objectReference: {fileID: 122728, guid: deef8a1d246004f4ebafbd6bf1b8e806, type: 2}
+    - target: {fileID: 0}
+      propertyPath: scorepickup
+      value: 
+      objectReference: {fileID: 184410, guid: e9987c430c1ab46ec9f32367842126f4, type: 2}
+    - target: {fileID: 0}
+      propertyPath: healthpickup
+      value: 
+      objectReference: {fileID: 160066, guid: 20687f46d9cd345a3bccd74847bf2125, type: 2}
+    - target: {fileID: 0}
+      propertyPath: speedpickup
+      value: 
+      objectReference: {fileID: 155500, guid: e0e15446c8fe540c99a8eade90bc368f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: gunpickup
+      value: 
+      objectReference: {fileID: 103222, guid: ab39221d4ec50448a8b0d077da61d1cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

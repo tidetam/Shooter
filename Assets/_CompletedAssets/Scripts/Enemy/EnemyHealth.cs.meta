@@ -1,8 +1,17 @@
 fileFormatVersion: 2
 guid: aa10cc87aff30c04dbe0aa648f5b6adc
+timeCreated: 1463380572
+licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - deathClip: {instanceID: 0}
+  - gunpickup: {fileID: 103222, guid: ab39221d4ec50448a8b0d077da61d1cc, type: 2}
+  - healthpickup: {fileID: 160066, guid: 20687f46d9cd345a3bccd74847bf2125, type: 2}
+  - speedpickup: {fileID: 155500, guid: e0e15446c8fe540c99a8eade90bc368f, type: 2}
+  - scorepickup: {fileID: 184410, guid: e9987c430c1ab46ec9f32367842126f4, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

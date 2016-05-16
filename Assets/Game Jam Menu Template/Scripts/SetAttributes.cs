@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEditor;
+//using UnityEditor;
 
 public class SetAttributes : MonoBehaviour {
 	public static int hp=100;      
@@ -35,6 +35,8 @@ public class SetAttributes : MonoBehaviour {
 			text.text = "Damage Per shoot: "+power;
 		else if (attribute_type=="coins")
 			text.text="Remaining Coins: " + coins;
+		else if (attribute_type=="coins_header")
+			text.text="Coins: " + coins;
 	}
 	public void addHPClicked(){
 		if (coins >= hpCoins) {
@@ -42,7 +44,7 @@ public class SetAttributes : MonoBehaviour {
 			coins -= hpCoins;
 		} 
 		else {
-			EditorUtility.DisplayDialog ("Error!", "You do not have enough coins!", "ok");
+//			EditorUtility.DisplayDialog ("Error!", "You do not have enough coins!", "ok");
 		}
 	}
 	public void addPowerClicked(){
@@ -51,7 +53,7 @@ public class SetAttributes : MonoBehaviour {
 			coins -= powerCoins;
 		} 
 		else {
-			EditorUtility.DisplayDialog ("Error!", "You do not have enough coins!", "ok");
+//			EditorUtility.DisplayDialog ("Error!", "You do not have enough coins!", "ok");
 		}
 	}
 	public static void addCoins(int coinsToAdd){
